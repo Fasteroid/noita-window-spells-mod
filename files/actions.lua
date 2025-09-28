@@ -14,6 +14,6 @@ table.insert( actions,
 	mana  = 30,
 	max_uses = 15,
 	action = function()
-		add_projectile("mods/windows/files/entities/test_entity.xml")
+		add_projectile("mods/windows/files/entities/window_berserk.xml")
 	end,
 } )

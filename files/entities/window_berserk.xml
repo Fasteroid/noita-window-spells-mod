@@ -3,9 +3,9 @@
    tags="projectile_player"
    >
 
-	<Base file="mods/windows/files/entities/base_window.xml">
+	<Base file="mods/windows/files/entities/window_base.xml">
 		<SpriteComponent 
-			image_file="mods/windows/files/sprites/blast_linear.xml"
+			image_file="mods/windows/files/sprites/blast_berserk.xml"
 			>
 		</SpriteComponent>
 
@@ -18,10 +18,6 @@
 		<ProjectileComponent 
 			damage_game_effect_entities="data/entities/misc/effect_berserk.xml,"
 			>
-			<config_explosion
-				explosion_sprite="data/particles/blast_out_berserk.xml"
-				>
-			</config_explosion>
 		</ProjectileComponent>
 	</Base>
 	
@@ -51,7 +47,6 @@
 		>
     </ParticleEmitterComponent>	
 
-	edges
 	<ParticleEmitterComponent 
 		emitted_material_name="spark_red"
 		gravity.y="0.0"
