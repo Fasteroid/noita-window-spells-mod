@@ -1,6 +1,8 @@
-function FindCrossingProjectiles(tag) 
+function FindCrossingProjectiles() 
+
+    local window = GetUpdatedEntityID()
     local window_radius = 32
-    local window_x, window_y, window_rotation = EntityGetTransform( GetUpdatedEntityID() )
+    local window_x, window_y, window_rotation = EntityGetTransform( window )
     
     local entities_through_window = {}
 
@@ -9,7 +11,7 @@ function FindCrossingProjectiles(tag)
     for i=1, #projectiles do
         local projectile = projectiles[i]
 
-        if EntityHasTag(projectile, tag) then goto continue_1 end -- comment(Fasteroid): skip what's already gone through
+        if EntityHasTag(projectile, "window_subject_" .. tostring(window)) then goto continue_1 end -- comment(Fasteroid): skip what's already gone through
         if EntityHasTag(projectile, "window") then goto continue_1 end -- no window self intersection
 
         local velocity = EntityGetFirstComponent(projectile, "VelocityComponent")
@@ -56,7 +58,7 @@ function FindCrossingProjectiles(tag)
             -- Check if crossing happened within window bounds
             if math.abs(crossing_y) <= window_radius then
                 table.insert(entities_through_window, projectile)
-                EntityAddTag(projectile, tag) -- comment(Fasteroid): tag so we don't find it again
+                EntityAddTag(projectile, "window_subject_" .. tostring(window)) -- comment(Fasteroid): tag so we don't find it again
             end
         end
 
@@ -76,4 +78,53 @@ function ComponentEditValue2(component_id, field_name, modifier)
     local value = ComponentGetValue2(component_id, field_name)
     value = modifier(value)
     ComponentSetValue2(component_id, field_name, value)
+end
+
+
+function determine_type(value)
+    -- Check for boolean first
+    if type(value) == "boolean" then
+        return "value_bool"
+    end
+    
+    -- Check for number
+    if type(value) == "number" then
+        -- Check if it's an integer (whole number)
+        if value == math.floor(value) then
+            return "value_int"
+        else
+            return "value_float"
+        end
+    end
+    
+    -- Everything else is a string
+    return "value_string"
+end
+
+function EntityGetVariable(entity_id, var_name, var_type)
+    local storage = EntityGetFirstComponent(entity_id, "VariableStorageComponent", var_name)
+    if( storage == nil ) then return end
+    return ComponentGetValue2(storage, var_type)
+end
+
+function EntitySetVariable(entity_id, var_name, var_value, is_default)
+    local t = determine_type(var_value)
+    local storage = EntityGetFirstComponent(entity_id, "VariableStorageComponent", var_name)
+    
+    if( storage == nil ) then
+        storage = EntityAddComponent2(entity_id, "VariableStorageComponent")
+        ComponentAddTag(storage, var_name)
+        is_default = false
+    end
+
+    if( not is_default ) then
+        ComponentSetValue2(storage, t, var_value)
+    end
+end
+
+function ComponentObjectSetValues2(component_id, object_name, fields_table)
+    -- Iterate through the fields table and set each field
+    for field_name, value in pairs(fields_table) do
+        ComponentObjectSetValue2(component_id, object_name, field_name, value)
+    end
 end
