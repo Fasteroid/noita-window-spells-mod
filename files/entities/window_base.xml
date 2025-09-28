@@ -17,7 +17,7 @@
 		>
 	</VelocityComponent> 
 
-  <LifetimeComponent lifetime="100">
+  <LifetimeComponent lifetime="500">
   </LifetimeComponent>
   
   <SpriteParticleEmitterComponent
