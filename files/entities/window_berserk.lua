@@ -1,8 +1,18 @@
 dofile_once("mods/windows/files/window_common.lua")
 
--- berserkium seems to manually mutate the projectile when it's created
-function isBerserked(entity)
+function ComponentObjectEditValue2(component_id, object_name, field_name, modifier)
+    local value = ComponentObjectGetValue2(component_id, object_name, field_name)
+    value = modifier(value)
+    ComponentObjectSetValue2(component_id, object_name, field_name, value)
+end
 
+function ComponentEditValue2(component_id, field_name, modifier)
+    local value = ComponentGetValue2(component_id, field_name)
+    value = modifier(value)
+    ComponentSetValue2(component_id, field_name, value)
+end
+
+function isBerserked(entity)
     local telltale = EntityGetFirstComponent(entity, "SpriteParticleEmitterComponent")
     if not telltale then return false end
 
@@ -57,23 +67,22 @@ function applyBerserkToProjectile(entity)
     ComponentObjectSetValue2(projectile_component,  "config_explosion", "sparks_inner_radius_coeff", 0)
     ComponentObjectSetValue2(projectile_component,  "config_explosion", "sparks_enabled", true) 
 
+    ComponentSetValue2(projectile_component,  "mShooterHerdId", -1)
+    ComponentEditValue2(projectile_component, "damage", double)
+
 end
 
 local crossing_projectiles = FindCrossingProjectiles("crossed_window_berserk")
 
 for i=1, #crossing_projectiles do
+
     local proj = crossing_projectiles[i]
+
+    -- comment(Fasteroid): this might be needed for balance later
+    -- if( isBerserked(proj) ) then goto continue_2 end
 
     applyBerserkToProjectile(proj)
 
-    -- local proj_comp = EntityGetFirstComponent(proj, "ProjectileComponent")
-
-    -- local members = ComponentObjectGetMembers(proj_comp, "config_explosion")
-    -- for k, v in pairs(members) do
-    --     if( v == nil ) then goto continue_2 end
-    --     print(k, v)
-    --     ::continue_2::
-    -- end
-
+    ::continue_2::
 
 end

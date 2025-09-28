@@ -64,10 +64,3 @@ function FindCrossingProjectiles(tag)
     
     return entities_through_window
 end
-
-function ComponentObjectEditValue2(component_id, object_name, field_name, modifier)
-    
-    local value = ComponentObjectGetValue2(component_id, object_name, field_name)
-    value = modifier(value)
-    ComponentObjectSetValue2(component_id, object_name, field_name, value)
-end
