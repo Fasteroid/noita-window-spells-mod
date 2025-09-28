@@ -1,0 +1,7 @@
+<Mod
+    name="Window Spells"
+    description="The 'circle of' spells, but for projectiles instead of creatures"
+    tags="spells"
+    dont_upload_files="noita_windows.code-workspace"
+>
+</Mod>

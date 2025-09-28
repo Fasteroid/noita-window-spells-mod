@@ -1,0 +1,6 @@
+<Mod
+	name="Window Spells"
+	description="The 'circle of spells', but for projectiles instead of creatures"
+	request_no_api_restrictions="0" 
+> 
+</Mod>

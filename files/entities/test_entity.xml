@@ -1,0 +1,105 @@
+<Entity 
+   name="$projectile_default" 
+   tags="projectile_player"
+   >
+
+	<Base file="mods/windows/files/entities/base_window.xml">
+		<SpriteComponent 
+			image_file="mods/windows/files/sprites/blast_linear.xml"
+			>
+		</SpriteComponent>
+
+
+		<SpriteParticleEmitterComponent
+			sprite_file="data/particles/berserk_0$[1-4].xml"
+			>
+		</SpriteParticleEmitterComponent>
+
+		<ProjectileComponent 
+			damage_game_effect_entities="data/entities/misc/effect_berserk.xml,"
+			>
+			<config_explosion
+				explosion_sprite="data/particles/blast_out_berserk.xml"
+				>
+			</config_explosion>
+		</ProjectileComponent>
+	</Base>
+	
+	<!-- body -->
+	<ParticleEmitterComponent 
+		emitted_material_name="spark_red"
+		gravity.y="0.0"
+		lifetime_min="0.5"
+		lifetime_max="1.5"
+		count_min="2"
+		count_max="2"
+		render_on_grid="1"
+		fade_based_on_lifetime="1"
+		cosmetic_force_create="0"
+		airflow_force="0.5"
+		airflow_time="0.01"
+		airflow_scale="0.05"
+		emission_interval_min_frames="1"
+		emission_interval_max_frames="1"
+		emit_cosmetic_particles="1"
+		is_emitting="1" 
+		
+		x_pos_offset_min="-1"
+		y_pos_offset_min="-32"
+		x_pos_offset_max="1"
+		y_pos_offset_max="32"
+		>
+    </ParticleEmitterComponent>	
+
+	edges
+	<ParticleEmitterComponent 
+		emitted_material_name="spark_red"
+		gravity.y="0.0"
+		lifetime_min="0.5"
+		lifetime_max="1.5"
+		count_min="1"
+		count_max="1"
+		render_on_grid="1"
+		fade_based_on_lifetime="1"
+		cosmetic_force_create="0"
+		airflow_force="0.3"
+		airflow_time="0.01"
+		airflow_scale="0.05"
+		emission_interval_min_frames="2"
+		emission_interval_max_frames="2"
+		emit_cosmetic_particles="1"
+		is_emitting="1" 
+		
+		x_pos_offset_min="-1"
+		y_pos_offset_min="-32"
+		x_pos_offset_max="1"
+		y_pos_offset_max="-31"
+		>
+	</ParticleEmitterComponent>
+
+	<ParticleEmitterComponent 
+		emitted_material_name="spark_red"
+		gravity.y="0.0"
+		lifetime_min="0.5"
+		lifetime_max="1.5"
+		count_min="1"
+		count_max="1"
+		render_on_grid="1"
+		fade_based_on_lifetime="1"
+		cosmetic_force_create="0"
+		airflow_force="0.3"
+		airflow_time="0.01"
+		airflow_scale="0.05"
+		emission_interval_min_frames="2"
+		emission_interval_max_frames="2"
+		emit_cosmetic_particles="1"
+		is_emitting="1" 
+		
+		x_pos_offset_min="-1"
+		y_pos_offset_min="32"
+		x_pos_offset_max="1"
+		y_pos_offset_max="31"
+		>
+	</ParticleEmitterComponent>
+
+</Entity>
