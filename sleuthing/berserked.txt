@@ -1,0 +1,498 @@
+LUA: AudioComponent     audio_physics_material  projectile
+LUA: AudioComponent     remove_latest_event_on_destroyed        0
+LUA: AudioComponent     m_audio_physics_material        26
+LUA: AudioComponent     play_only_if_visible    0
+LUA: AudioComponent     set_latest_event_position       0
+LUA: AudioComponent     send_message_on_event_dead      0
+LUA: AudioComponent     event_root      projectiles/hit
+LUA: AudioComponent     m_latest_source -1
+LUA: AudioComponent     file    data/audio/Desktop/projectiles.bank
+LUA: AudioComponent     audio_physics_material
+LUA: AudioComponent     remove_latest_event_on_destroyed        0
+LUA: AudioComponent     m_audio_physics_material        0
+LUA: AudioComponent     play_only_if_visible    0
+LUA: AudioComponent     set_latest_event_position       0
+LUA: AudioComponent     send_message_on_event_dead      0
+LUA: AudioComponent     event_root      player_projectiles/bullet_light
+LUA: AudioComponent     m_latest_source 206
+LUA: AudioComponent     file    data/audio/Desktop/projectiles.bank
+LUA: LightComponent     offset_y        0
+LUA: LightComponent     mAlpha  1
+LUA: LightComponent     update_properties       0
+LUA: LightComponent     fade_out_time   0
+LUA: LightComponent     b       255
+LUA: LightComponent     mSprite
+LUA: LightComponent     offset_x        0
+LUA: LightComponent     r       255
+LUA: LightComponent     blinking_freq   1
+LUA: LightComponent     radius  30
+LUA: LightComponent     g       40
+LUA: ParticleEmitterComponent   b2_force        0
+LUA: ParticleEmitterComponent   m_has_emitted   1
+LUA: ParticleEmitterComponent   fade_based_on_lifetime  1
+LUA: ParticleEmitterComponent   x_vel_max       0
+LUA: ParticleEmitterComponent   image_animation_emission_probability    1
+LUA: ParticleEmitterComponent   direction_random_deg    0
+LUA: ParticleEmitterComponent   m_next_emit_frame       165144
+LUA: ParticleEmitterComponent   y_vel_max       0
+LUA: ParticleEmitterComponent   use_material_inventory  0
+LUA: ParticleEmitterComponent   image_animation_raytrace_from_center    0
+LUA: ParticleEmitterComponent   m_last_emit_position
+LUA: ParticleEmitterComponent   image_animation_colors_file
+LUA: ParticleEmitterComponent   y_pos_offset_min        0
+LUA: ParticleEmitterComponent   image_animation_phase   0
+LUA: ParticleEmitterComponent   set_magic_creation      0
+LUA: ParticleEmitterComponent   lifetime_max    0.2
+LUA: ParticleEmitterComponent   collide_with_gas_and_fire       1
+LUA: ParticleEmitterComponent   y_vel_min       0
+LUA: ParticleEmitterComponent   airflow_force   10.5
+LUA: ParticleEmitterComponent   is_emitting     1
+LUA: ParticleEmitterComponent   mMaterialInventoryMax   1024
+LUA: ParticleEmitterComponent   image_animation_use_entity_rotation     0
+LUA: ParticleEmitterComponent   image_animation_file
+LUA: ParticleEmitterComponent   cosmetic_force_create   1
+LUA: ParticleEmitterComponent   render_on_grid  1
+LUA: ParticleEmitterComponent   fire_cells_dont_ignite_damagemodel      0
+LUA: ParticleEmitterComponent   emitted_material_name   plasma_fading_pink
+LUA: ParticleEmitterComponent   render_ultrabright      0
+LUA: ParticleEmitterComponent   friction        0
+LUA: ParticleEmitterComponent   emit_cosmetic_particles 1
+LUA: ParticleEmitterComponent   offset
+LUA: ParticleEmitterComponent   ignore_transform_updated_msg    0
+LUA: ParticleEmitterComponent   gravity
+LUA: ParticleEmitterComponent   x_pos_offset_max        0
+LUA: ParticleEmitterComponent   attractor_force 0
+LUA: ParticleEmitterComponent   area_circle_sector_degrees      360
+LUA: ParticleEmitterComponent   m_particle_attractor_id -1
+LUA: ParticleEmitterComponent   x_vel_min       0
+LUA: ParticleEmitterComponent   m_collision_angles
+LUA: ParticleEmitterComponent   m_image_based_animation_time    0
+LUA: ParticleEmitterComponent   image_animation_speed   1
+LUA: ParticleEmitterComponent   airflow_scale   0.05
+LUA: ParticleEmitterComponent   create_real_particles   0
+LUA: ParticleEmitterComponent   color   0
+LUA: ParticleEmitterComponent   area_circle_radius
+LUA: ParticleEmitterComponent   m_material_id
+LUA: ParticleEmitterComponent   emit_only_if_there_is_space     0
+LUA: ParticleEmitterComponent   count_min
+LUA: ParticleEmitterComponent   is_trail        1
+LUA: ParticleEmitterComponent   mExPosition
+LUA: ParticleEmitterComponent   y_pos_offset_max        0
+LUA: ParticleEmitterComponent   velocity_always_away_from_center        0
+LUA: ParticleEmitterComponent   delay_frames    0
+LUA: ParticleEmitterComponent   x_pos_offset_min        0
+LUA: ParticleEmitterComponent   draw_as_long    0
+LUA: ParticleEmitterComponent   custom_alpha    -1
+LUA: ParticleEmitterComponent   particle_single_width   1
+LUA: ParticleEmitterComponent   collide_with_grid       1
+LUA: ParticleEmitterComponent   image_animation_loop    1
+LUA: ParticleEmitterComponent   emitter_lifetime_frames -1
+LUA: ParticleEmitterComponent   emit_real_particles     0
+LUA: ParticleEmitterComponent   custom_style
+LUA: ParticleEmitterComponent   airflow_time    1.401
+LUA: ParticleEmitterComponent   count_max
+LUA: ParticleEmitterComponent   emission_interval_min_frames    1
+LUA: ParticleEmitterComponent   m_cached_image_animation
+LUA: ParticleEmitterComponent   emission_interval_max_frames    1
+LUA: ParticleEmitterComponent   lifetime_min    0.1
+LUA: ParticleEmitterComponent   render_back     1
+LUA: ParticleEmitterComponent   trail_gap       1
+LUA: ParticleEmitterComponent   emission_chance 100
+LUA: ParticleEmitterComponent   color_is_based_on_pos   0
+LUA: ParticleEmitterComponent   b2_force        0
+LUA: ParticleEmitterComponent   m_has_emitted   0
+LUA: ParticleEmitterComponent   fade_based_on_lifetime  1
+LUA: ParticleEmitterComponent   x_vel_max       40
+LUA: ParticleEmitterComponent   image_animation_emission_probability    1
+LUA: ParticleEmitterComponent   direction_random_deg    0
+LUA: ParticleEmitterComponent   m_next_emit_frame       165153
+LUA: ParticleEmitterComponent   y_vel_max       0
+LUA: ParticleEmitterComponent   use_material_inventory  0
+LUA: ParticleEmitterComponent   image_animation_raytrace_from_center    0
+LUA: ParticleEmitterComponent   m_last_emit_position
+LUA: ParticleEmitterComponent   image_animation_colors_file
+LUA: ParticleEmitterComponent   y_pos_offset_min        0
+LUA: ParticleEmitterComponent   image_animation_phase   0
+LUA: ParticleEmitterComponent   set_magic_creation      0
+LUA: ParticleEmitterComponent   lifetime_max    0.8
+LUA: ParticleEmitterComponent   collide_with_gas_and_fire       1
+LUA: ParticleEmitterComponent   y_vel_min       0
+LUA: ParticleEmitterComponent   airflow_force   1.5
+LUA: ParticleEmitterComponent   is_emitting     1
+LUA: ParticleEmitterComponent   mMaterialInventoryMax   1024
+LUA: ParticleEmitterComponent   image_animation_use_entity_rotation     0
+LUA: ParticleEmitterComponent   image_animation_file
+LUA: ParticleEmitterComponent   cosmetic_force_create   1
+LUA: ParticleEmitterComponent   render_on_grid  1
+LUA: ParticleEmitterComponent   fire_cells_dont_ignite_damagemodel      0
+LUA: ParticleEmitterComponent   emitted_material_name   plasma_fading_pink
+LUA: ParticleEmitterComponent   render_ultrabright      0
+LUA: ParticleEmitterComponent   friction        0
+LUA: ParticleEmitterComponent   emit_cosmetic_particles 1
+LUA: ParticleEmitterComponent   offset
+LUA: ParticleEmitterComponent   ignore_transform_updated_msg    0
+LUA: ParticleEmitterComponent   gravity
+LUA: ParticleEmitterComponent   x_pos_offset_max        0
+LUA: ParticleEmitterComponent   attractor_force 0
+LUA: ParticleEmitterComponent   area_circle_sector_degrees      360
+LUA: ParticleEmitterComponent   m_particle_attractor_id -1
+LUA: ParticleEmitterComponent   x_vel_min       20
+LUA: ParticleEmitterComponent   m_collision_angles
+LUA: ParticleEmitterComponent   m_image_based_animation_time    0
+LUA: ParticleEmitterComponent   image_animation_speed   1
+LUA: ParticleEmitterComponent   airflow_scale   0.05
+LUA: ParticleEmitterComponent   create_real_particles   0
+LUA: ParticleEmitterComponent   color   0
+LUA: ParticleEmitterComponent   area_circle_radius
+LUA: ParticleEmitterComponent   m_material_id
+LUA: ParticleEmitterComponent   emit_only_if_there_is_space     0
+LUA: ParticleEmitterComponent   count_min
+LUA: ParticleEmitterComponent   is_trail        0
+LUA: ParticleEmitterComponent   mExPosition
+LUA: ParticleEmitterComponent   y_pos_offset_max        0
+LUA: ParticleEmitterComponent   velocity_always_away_from_center        0
+LUA: ParticleEmitterComponent   delay_frames    0
+LUA: ParticleEmitterComponent   x_pos_offset_min        0
+LUA: ParticleEmitterComponent   draw_as_long    0
+LUA: ParticleEmitterComponent   custom_alpha    -1
+LUA: ParticleEmitterComponent   particle_single_width   1
+LUA: ParticleEmitterComponent   collide_with_grid       1
+LUA: ParticleEmitterComponent   image_animation_loop    1
+LUA: ParticleEmitterComponent   emitter_lifetime_frames -1
+LUA: ParticleEmitterComponent   emit_real_particles     0
+LUA: ParticleEmitterComponent   custom_style
+LUA: ParticleEmitterComponent   airflow_time    0.401
+LUA: ParticleEmitterComponent   count_max
+LUA: ParticleEmitterComponent   emission_interval_min_frames    1
+LUA: ParticleEmitterComponent   m_cached_image_animation
+LUA: ParticleEmitterComponent   emission_interval_max_frames    10
+LUA: ParticleEmitterComponent   lifetime_min    0.6
+LUA: ParticleEmitterComponent   render_back     1
+LUA: ParticleEmitterComponent   trail_gap       8
+LUA: ParticleEmitterComponent   emission_chance 100
+LUA: ParticleEmitterComponent   color_is_based_on_pos   0
+LUA: ParticleEmitterComponent   b2_force        0
+LUA: ParticleEmitterComponent   m_has_emitted   0
+LUA: ParticleEmitterComponent   fade_based_on_lifetime  1
+LUA: ParticleEmitterComponent   x_vel_max       20
+LUA: ParticleEmitterComponent   image_animation_emission_probability    1
+LUA: ParticleEmitterComponent   direction_random_deg    0
+LUA: ParticleEmitterComponent   m_next_emit_frame       165159
+LUA: ParticleEmitterComponent   y_vel_max       0
+LUA: ParticleEmitterComponent   use_material_inventory  0
+LUA: ParticleEmitterComponent   image_animation_raytrace_from_center    0
+LUA: ParticleEmitterComponent   m_last_emit_position
+LUA: ParticleEmitterComponent   image_animation_colors_file
+LUA: ParticleEmitterComponent   y_pos_offset_min        0
+LUA: ParticleEmitterComponent   image_animation_phase   0
+LUA: ParticleEmitterComponent   set_magic_creation      0
+LUA: ParticleEmitterComponent   lifetime_max    1.5
+LUA: ParticleEmitterComponent   collide_with_gas_and_fire       1
+LUA: ParticleEmitterComponent   y_vel_min       0
+LUA: ParticleEmitterComponent   airflow_force   0.5
+LUA: ParticleEmitterComponent   is_emitting     1
+LUA: ParticleEmitterComponent   mMaterialInventoryMax   1024
+LUA: ParticleEmitterComponent   image_animation_use_entity_rotation     0
+LUA: ParticleEmitterComponent   image_animation_file
+LUA: ParticleEmitterComponent   cosmetic_force_create   1
+LUA: ParticleEmitterComponent   render_on_grid  1
+LUA: ParticleEmitterComponent   fire_cells_dont_ignite_damagemodel      0
+LUA: ParticleEmitterComponent   emitted_material_name   plasma_fading_pink
+LUA: ParticleEmitterComponent   render_ultrabright      0
+LUA: ParticleEmitterComponent   friction        0
+LUA: ParticleEmitterComponent   emit_cosmetic_particles 1
+LUA: ParticleEmitterComponent   offset
+LUA: ParticleEmitterComponent   ignore_transform_updated_msg    0
+LUA: ParticleEmitterComponent   gravity
+LUA: ParticleEmitterComponent   x_pos_offset_max        0
+LUA: ParticleEmitterComponent   attractor_force 0
+LUA: ParticleEmitterComponent   area_circle_sector_degrees      360
+LUA: ParticleEmitterComponent   m_particle_attractor_id -1
+LUA: ParticleEmitterComponent   x_vel_min       10
+LUA: ParticleEmitterComponent   m_collision_angles
+LUA: ParticleEmitterComponent   m_image_based_animation_time    0
+LUA: ParticleEmitterComponent   image_animation_speed   1
+LUA: ParticleEmitterComponent   airflow_scale   0.05
+LUA: ParticleEmitterComponent   create_real_particles   0
+LUA: ParticleEmitterComponent   color   0
+LUA: ParticleEmitterComponent   area_circle_radius
+LUA: ParticleEmitterComponent   m_material_id
+LUA: ParticleEmitterComponent   emit_only_if_there_is_space     0
+LUA: ParticleEmitterComponent   count_min
+LUA: ParticleEmitterComponent   is_trail        0
+LUA: ParticleEmitterComponent   mExPosition
+LUA: ParticleEmitterComponent   y_pos_offset_max        0
+LUA: ParticleEmitterComponent   velocity_always_away_from_center        0
+LUA: ParticleEmitterComponent   delay_frames    0
+LUA: ParticleEmitterComponent   x_pos_offset_min        0
+LUA: ParticleEmitterComponent   draw_as_long    0
+LUA: ParticleEmitterComponent   custom_alpha    -1
+LUA: ParticleEmitterComponent   particle_single_width   1
+LUA: ParticleEmitterComponent   collide_with_grid       1
+LUA: ParticleEmitterComponent   image_animation_loop    1
+LUA: ParticleEmitterComponent   emitter_lifetime_frames -1
+LUA: ParticleEmitterComponent   emit_real_particles     0
+LUA: ParticleEmitterComponent   custom_style
+LUA: ParticleEmitterComponent   airflow_time    0.5
+LUA: ParticleEmitterComponent   count_max
+LUA: ParticleEmitterComponent   emission_interval_min_frames    10
+LUA: ParticleEmitterComponent   m_cached_image_animation
+LUA: ParticleEmitterComponent   emission_interval_max_frames    20
+LUA: ParticleEmitterComponent   lifetime_min    1.4
+LUA: ParticleEmitterComponent   render_back     1
+LUA: ParticleEmitterComponent   trail_gap       8
+LUA: ParticleEmitterComponent   emission_chance 100
+LUA: ParticleEmitterComponent   color_is_based_on_pos   0
+LUA: ParticleEmitterComponent   b2_force        0
+LUA: ParticleEmitterComponent   m_has_emitted   1
+LUA: ParticleEmitterComponent   fade_based_on_lifetime  1
+LUA: ParticleEmitterComponent   x_vel_max       2
+LUA: ParticleEmitterComponent   image_animation_emission_probability    1
+LUA: ParticleEmitterComponent   direction_random_deg    0
+LUA: ParticleEmitterComponent   m_next_emit_frame       165144
+LUA: ParticleEmitterComponent   y_vel_max       2
+LUA: ParticleEmitterComponent   use_material_inventory  0
+LUA: ParticleEmitterComponent   image_animation_raytrace_from_center    0
+LUA: ParticleEmitterComponent   m_last_emit_position
+LUA: ParticleEmitterComponent   image_animation_colors_file
+LUA: ParticleEmitterComponent   y_pos_offset_min        -1
+LUA: ParticleEmitterComponent   image_animation_phase   0
+LUA: ParticleEmitterComponent   set_magic_creation      0
+LUA: ParticleEmitterComponent   lifetime_max    2
+LUA: ParticleEmitterComponent   collide_with_gas_and_fire       1
+LUA: ParticleEmitterComponent   y_vel_min       -2
+LUA: ParticleEmitterComponent   airflow_force   1.5
+LUA: ParticleEmitterComponent   is_emitting     1
+LUA: ParticleEmitterComponent   mMaterialInventoryMax   1024
+LUA: ParticleEmitterComponent   image_animation_use_entity_rotation     0
+LUA: ParticleEmitterComponent   image_animation_file
+LUA: ParticleEmitterComponent   cosmetic_force_create   1
+LUA: ParticleEmitterComponent   render_on_grid  1
+LUA: ParticleEmitterComponent   fire_cells_dont_ignite_damagemodel      0
+LUA: ParticleEmitterComponent   emitted_material_name   spark_red
+LUA: ParticleEmitterComponent   render_ultrabright      0
+LUA: ParticleEmitterComponent   friction        0
+LUA: ParticleEmitterComponent   emit_cosmetic_particles 1
+LUA: ParticleEmitterComponent   offset
+LUA: ParticleEmitterComponent   ignore_transform_updated_msg    0
+LUA: ParticleEmitterComponent   gravity
+LUA: ParticleEmitterComponent   x_pos_offset_max        1
+LUA: ParticleEmitterComponent   attractor_force 0
+LUA: ParticleEmitterComponent   area_circle_sector_degrees      360
+LUA: ParticleEmitterComponent   m_particle_attractor_id -1
+LUA: ParticleEmitterComponent   x_vel_min       -2
+LUA: ParticleEmitterComponent   m_collision_angles
+LUA: ParticleEmitterComponent   m_image_based_animation_time    0
+LUA: ParticleEmitterComponent   image_animation_speed   1
+LUA: ParticleEmitterComponent   airflow_scale   0.05
+LUA: ParticleEmitterComponent   create_real_particles   0
+LUA: ParticleEmitterComponent   color   0
+LUA: ParticleEmitterComponent   area_circle_radius
+LUA: ParticleEmitterComponent   m_material_id
+LUA: ParticleEmitterComponent   emit_only_if_there_is_space     0
+LUA: ParticleEmitterComponent   count_min
+LUA: ParticleEmitterComponent   is_trail        1
+LUA: ParticleEmitterComponent   mExPosition
+LUA: ParticleEmitterComponent   y_pos_offset_max        1
+LUA: ParticleEmitterComponent   velocity_always_away_from_center        0
+LUA: ParticleEmitterComponent   delay_frames    0
+LUA: ParticleEmitterComponent   x_pos_offset_min        -1
+LUA: ParticleEmitterComponent   draw_as_long    0
+LUA: ParticleEmitterComponent   custom_alpha    -1
+LUA: ParticleEmitterComponent   particle_single_width   1
+LUA: ParticleEmitterComponent   collide_with_grid       1
+LUA: ParticleEmitterComponent   image_animation_loop    1
+LUA: ParticleEmitterComponent   emitter_lifetime_frames -1
+LUA: ParticleEmitterComponent   emit_real_particles     0
+LUA: ParticleEmitterComponent   custom_style
+LUA: ParticleEmitterComponent   airflow_time    0.401
+LUA: ParticleEmitterComponent   count_max
+LUA: ParticleEmitterComponent   emission_interval_min_frames    1
+LUA: ParticleEmitterComponent   m_cached_image_animation
+LUA: ParticleEmitterComponent   emission_interval_max_frames    2
+LUA: ParticleEmitterComponent   lifetime_min    0.8
+LUA: ParticleEmitterComponent   render_back     1
+LUA: ParticleEmitterComponent   trail_gap       1
+LUA: ParticleEmitterComponent   emission_chance 100
+LUA: ParticleEmitterComponent   color_is_based_on_pos   0
+LUA: ProjectileComponent        do_moveto_update        1
+LUA: ProjectileComponent        angular_velocity        0
+LUA: ProjectileComponent        penetrate_world_velocity_coeff  0.6
+LUA: ProjectileComponent        ground_penetration_coeff        0
+LUA: ProjectileComponent        mInitialSpeed   761.689
+LUA: ProjectileComponent        on_death_emit_particle  0
+LUA: ProjectileComponent        ground_collision_fx     1
+LUA: ProjectileComponent        die_on_low_velocity     0
+LUA: ProjectileComponent        on_collision_spawn_entity       1
+LUA: ProjectileComponent        penetrate_entities      0
+LUA: ProjectileComponent        velocity_sets_scale     1
+LUA: ProjectileComponent        go_through_this_material
+LUA: ProjectileComponent        die_on_liquid_collision 0
+LUA: ProjectileComponent        bounce_at_any_angle     0
+LUA: ProjectileComponent        on_death_emit_particle_type
+LUA: ProjectileComponent        shoot_light_flash_r     255
+LUA: ProjectileComponent        mDamagedEntities
+LUA: ProjectileComponent        on_death_emit_particle_count    1
+LUA: ProjectileComponent        damage_by_type
+LUA: ProjectileComponent        never_hit_player        0
+LUA: ProjectileComponent        camera_shake_when_shot  0.5
+LUA: ProjectileComponent        bounce_always   0
+LUA: ProjectileComponent        velocity_sets_y_flip    0
+LUA: ProjectileComponent        collide_with_world      1
+LUA: ProjectileComponent        penetrate_world 0
+LUA: ProjectileComponent        physics_impulse_coeff   300
+LUA: ProjectileComponent        mShooterHerdId  -1
+LUA: ProjectileComponent        lifetime_randomness     7
+LUA: ProjectileComponent        on_death_particle_check_concrete        0
+LUA: ProjectileComponent        spawn_entity_is_projectile      0
+LUA: ProjectileComponent        explosion_dont_damage_shooter   1
+LUA: ProjectileComponent        muzzle_flash_file       data/entities/particles/muzzle_flashes/muzzle_flash_small_pink.xml
+LUA: ProjectileComponent        shoot_light_flash_g     160
+LUA: ProjectileComponent        shoot_light_flash_b     255
+LUA: ProjectileComponent        collide_with_entities   1
+LUA: ProjectileComponent        damage_scale_max_speed  0
+LUA: ProjectileComponent        ragdoll_fx_on_collision
+LUA: ProjectileComponent        bounces_left    0
+LUA: ProjectileComponent        lifetime        32
+LUA: ProjectileComponent        velocity_updates_animation      0
+LUA: ProjectileComponent        damage_every_x_frames   -1
+LUA: ProjectileComponent        friction        1
+LUA: ProjectileComponent        on_death_duplicate_remaining    0
+LUA: ProjectileComponent        direction_random_rad    0
+LUA: ProjectileComponent        shoot_light_flash_radius        64
+LUA: ProjectileComponent        shell_casing_material   brass
+LUA: ProjectileComponent        mStartingLifetime       34
+LUA: ProjectileComponent        mLastFrameDamaged       -1024
+LUA: ProjectileComponent        on_collision_remove_projectile  0
+LUA: ProjectileComponent        friendly_fire   0
+LUA: ProjectileComponent        damage_scaled_by_speed  0
+LUA: ProjectileComponent        mWhoShot        47
+LUA: ProjectileComponent        mTriggers
+LUA: ProjectileComponent        mEntityThatShot 0
+LUA: ProjectileComponent        on_death_item_pickable_radius   0
+LUA: ProjectileComponent        mWhoShotEntityTypeID    774
+LUA: ProjectileComponent        play_damage_sounds      1
+LUA: ProjectileComponent        config
+LUA: ProjectileComponent        collect_materials_to_shooter    0
+LUA: ProjectileComponent        damage_game_effect_entities
+LUA: ProjectileComponent        create_shell_casing     0
+LUA: ProjectileComponent        hit_particle_force_multiplier   0.1
+LUA: ProjectileComponent        config_explosion
+LUA: ProjectileComponent        speed_max       850
+LUA: ProjectileComponent        damage  0.24
+LUA: ProjectileComponent        ground_penetration_max_durability_to_destroy    0
+LUA: ProjectileComponent        velocity_sets_scale_coeff       1
+LUA: ProjectileComponent        knockback_force 0
+LUA: ProjectileComponent        shell_casing_offset
+LUA: ProjectileComponent        bounce_energy   0.5
+LUA: ProjectileComponent        collide_with_shooter_frames     -1
+LUA: ProjectileComponent        ragdoll_force_multiplier        0.005
+LUA: ProjectileComponent        damage_critical
+LUA: ProjectileComponent        dont_collide_with_tag
+LUA: ProjectileComponent        collide_with_tag        hittable
+LUA: ProjectileComponent        direction_nonrandom_rad 0
+LUA: ProjectileComponent        on_death_gfx_leave_sprite       0
+LUA: ProjectileComponent        attach_to_parent_trigger        0
+LUA: ProjectileComponent        speed_min       750
+LUA: ProjectileComponent        bounce_fx_file
+LUA: ProjectileComponent        projectile_type
+LUA: ProjectileComponent        blood_count_multiplier  1
+LUA: ProjectileComponent        on_lifetime_out_explode 1
+LUA: ProjectileComponent        velocity_sets_rotation  1
+LUA: ProjectileComponent        spawn_entity
+LUA: ProjectileComponent        lob_max 0.7
+LUA: ProjectileComponent        on_death_explode        1
+LUA: ProjectileComponent        on_collision_die        1
+LUA: ProjectileComponent        lob_min 0.5
+LUA: ProjectileComponent        die_on_low_velocity_limit       50
+LUA: SpriteComponent    kill_entity_after_finished      0
+LUA: SpriteComponent    offset_y        0
+LUA: SpriteComponent    update_transform_rotation       1
+LUA: SpriteComponent    ui_is_parent    0
+LUA: SpriteComponent    special_scale_x 1
+LUA: SpriteComponent    emissive        0
+LUA: SpriteComponent    is_text_sprite  0
+LUA: SpriteComponent    alpha   1
+LUA: SpriteComponent    transform_offset
+LUA: SpriteComponent    update_transform        1
+LUA: SpriteComponent    rect_animation  default
+LUA: SpriteComponent    mRenderList
+LUA: SpriteComponent    smooth_filtering        0
+LUA: SpriteComponent    mSprite
+LUA: SpriteComponent    z_index 1
+LUA: SpriteComponent    visible 1
+LUA: SpriteComponent    never_ragdollify_on_death       0
+LUA: SpriteComponent    special_scale_y 1
+LUA: SpriteComponent    text
+LUA: SpriteComponent    mRenderListHandle       118
+LUA: SpriteComponent    fog_of_war_hole 0
+LUA: SpriteComponent    next_rect_animation     default
+LUA: SpriteComponent    has_special_scale       0
+LUA: SpriteComponent    image_file      data/projectiles_gfx/spark.xml
+LUA: SpriteComponent    additive        1
+LUA: SpriteComponent    offset_x        0
+LUA: SpriteComponent    offset_animator_offset
+LUA: SpriteParticleEmitterComponent     angular_velocity        0
+LUA: SpriteParticleEmitterComponent     lifetime        0
+LUA: SpriteParticleEmitterComponent     sprite_random_rotation  0
+LUA: SpriteParticleEmitterComponent     randomize_alpha
+LUA: SpriteParticleEmitterComponent     randomize_lifetime
+LUA: SpriteParticleEmitterComponent     use_rotation_from_entity        0
+LUA: SpriteParticleEmitterComponent     scale_velocity
+LUA: SpriteParticleEmitterComponent     sprite_centered 0
+LUA: SpriteParticleEmitterComponent     randomize_angular_velocity
+LUA: SpriteParticleEmitterComponent     gravity
+LUA: SpriteParticleEmitterComponent     randomize_animation_speed_coeff
+LUA: SpriteParticleEmitterComponent     camera_bound    1
+LUA: SpriteParticleEmitterComponent     randomize_scale
+LUA: SpriteParticleEmitterComponent     sprite_file     data/particles/tinyspark_02.xml
+LUA: SpriteParticleEmitterComponent     use_rotation_from_velocity_component    0
+LUA: SpriteParticleEmitterComponent     randomize_rotation
+LUA: SpriteParticleEmitterComponent     emission_interval_min_frames    2
+LUA: SpriteParticleEmitterComponent     velocity
+LUA: SpriteParticleEmitterComponent     rotation        0
+LUA: SpriteParticleEmitterComponent     color
+LUA: SpriteParticleEmitterComponent     color_change
+LUA: SpriteParticleEmitterComponent     mNextEmitFrame  0
+LUA: SpriteParticleEmitterComponent     velocity_always_away_from_center        0
+LUA: SpriteParticleEmitterComponent     emissive        0
+LUA: SpriteParticleEmitterComponent     camera_distance 75
+LUA: SpriteParticleEmitterComponent     entity_velocity_multiplier      0
+LUA: SpriteParticleEmitterComponent     delay   0
+LUA: SpriteParticleEmitterComponent     is_emitting     1
+LUA: SpriteParticleEmitterComponent     expand_randomize_position
+LUA: SpriteParticleEmitterComponent     z_index 0
+LUA: SpriteParticleEmitterComponent     entity_file
+LUA: SpriteParticleEmitterComponent     emission_interval_max_frames    3
+LUA: SpriteParticleEmitterComponent     count_max       1
+LUA: SpriteParticleEmitterComponent     count_min       1
+LUA: SpriteParticleEmitterComponent     additive        0
+LUA: SpriteParticleEmitterComponent     use_velocity_as_rotation        0
+LUA: SpriteParticleEmitterComponent     velocity_slowdown       0
+LUA: SpriteParticleEmitterComponent     scale
+LUA: SpriteParticleEmitterComponent     render_back     0
+LUA: SpriteParticleEmitterComponent     randomize_position
+LUA: SpriteParticleEmitterComponent     randomize_velocity
+LUA: SpriteParticleEmitterComponent     randomize_position_inside_hitbox        0
+LUA: VariableStorageComponent   value_string    data/entities/projectiles/deck/light_bullet.xml
+LUA: VariableStorageComponent   value_int       0
+LUA: VariableStorageComponent   value_bool      0
+LUA: VariableStorageComponent   value_float     0
+LUA: VariableStorageComponent   name    projectile_file
+LUA: VelocityComponent  mass    0.04
+LUA: VelocityComponent  mAverageLiquidHitCount  0
+LUA: VelocityComponent  mLatestLiquidHitCount   0
+LUA: VelocityComponent  limit_to_max_velocity   1
+LUA: VelocityComponent  liquid_drag     1
+LUA: VelocityComponent  updates_velocity        1
+LUA: VelocityComponent  mVelocity
+LUA: VelocityComponent  gravity_x       0
+LUA: VelocityComponent  mPrevPosition
+LUA: VelocityComponent  gravity_y       200
+LUA: VelocityComponent  liquid_death_threshold  0
+LUA: VelocityComponent  apply_terminal_velocity 1
+LUA: VelocityComponent  terminal_velocity       1000
+LUA: VelocityComponent  displace_liquid 1
+LUA: VelocityComponent  mPrevVelocity
+LUA: VelocityComponent  affect_physics_bodies   1
+LUA: VelocityComponent  air_friction    1.7
