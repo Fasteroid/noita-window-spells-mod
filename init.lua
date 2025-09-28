@@ -38,10 +38,10 @@ function OnModInit()
 end
 
 
-function OnPlayerSpawned( player_entity ) -- This runs when player entity has been created
-	local x, y = EntityGetTransform( player_entity )
-	CreateItemActionEntity("WINDOW_BERSERK", x+20, y)
-end
+-- function OnPlayerSpawned( player_entity ) -- This runs when player entity has been created
+-- 	local x, y = EntityGetTransform( player_entity )
+-- 	CreateItemActionEntity("WINDOW_BERSERK", x+20, y)
+-- end
 
 -- This code runs when all mods' filesystems are registered
 ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/windows/files/actions.lua" ) -- Basically dofile("mods/example/files/actions.lua") will appear at the end of gun_actions.lua

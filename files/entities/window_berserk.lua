@@ -11,6 +11,7 @@ function isBerserked(entity)
     return (sprite == "data/particles/tinyspark_02.xml")
 end
 
+local double = function(n) return n*2 end
 
 function applyBerserkToProjectile(entity)
 
@@ -49,6 +50,13 @@ function applyBerserkToProjectile(entity)
 
     ComponentSetValue2(berserk_trail, "gravity", 0, 0, 0, 0)
 
+    local projectile_component = EntityGetFirstComponent(entity, "ProjectileComponent")
+
+    ComponentObjectEditValue2(projectile_component, "config_explosion", "ray_energy", double)
+    ComponentObjectEditValue2(projectile_component, "config_explosion", "explosion_radius", double)
+    ComponentObjectSetValue2(projectile_component,  "config_explosion", "sparks_inner_radius_coeff", 0)
+    ComponentObjectSetValue2(projectile_component,  "config_explosion", "sparks_enabled", true) 
+
 end
 
 local crossing_projectiles = FindCrossingProjectiles("crossed_window_berserk")
@@ -58,21 +66,14 @@ for i=1, #crossing_projectiles do
 
     applyBerserkToProjectile(proj)
 
-    -- local children = EntityGetAllComponents(proj)
+    -- local proj_comp = EntityGetFirstComponent(proj, "ProjectileComponent")
 
-    -- for j=1, #children do
-    --     local child = children[j]
-    --     local kind = ComponentGetTypeName(child)
-        
-
-    --     local members = ComponentGetMembers(child)
-    --     for k, v in pairs(members) do
-    --         if( v == nil ) then goto continue_2 end
-    --         print(kind, k, v)
-    --         ::continue_2::
-    --     end
-
+    -- local members = ComponentObjectGetMembers(proj_comp, "config_explosion")
+    -- for k, v in pairs(members) do
+    --     if( v == nil ) then goto continue_2 end
+    --     print(k, v)
+    --     ::continue_2::
     -- end
 
-    ::continue_1::
+
 end
