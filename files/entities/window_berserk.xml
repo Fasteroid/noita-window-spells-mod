@@ -97,4 +97,10 @@
 		>
 	</ParticleEmitterComponent>
 
+	<LuaComponent
+		script_source_file="mods/windows/files/entities/window_berserk.lua"
+		execute_every_n_frame="1"
+		>
+	</LuaComponent>
+
 </Entity>
