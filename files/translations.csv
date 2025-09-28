@@ -1,2 +1,8 @@
-action_window_berserk,Window of Fervor,,,,,,,,,,,,,,,,,,,,,,,
-actiondesc_window_berserk,"Applies berserk to projectiles which pass through it",,,,,,,,,,,,,,,,,,,,,,,
+action_window_berserk,Window of fervor,,,,,,,,,,,,,,,,,,,,,,,
+actiondesc_window_berserk,"A window of berserk magic",,,,,,,,,,,,,,,,,,,,,,,
+
+action_window_frozen,Window of stillness,,,,,,,,,,,,,,,,,,,,,,,
+actiondesc_window_frozen,"A window of freezing magic",,,,,,,,,,,,,,,,,,,,,,,
+
+action_window_debug,Window of Debugging,,,,,,,,,,,,,,,,,,,,,,,
+actiondesc_window_debug,"A window of debugging magic",,,,,,,,,,,,,,,,,,,,,,,

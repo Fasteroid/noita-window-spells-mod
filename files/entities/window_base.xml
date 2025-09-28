@@ -1,4 +1,4 @@
-<Entity name="$projectile_default" tags="projectile_player,projectile" >
+<Entity name="$projectile_default" tags="projectile_player,projectile,window" >
 
   <SpriteComponent 
     _enabled="1" 
@@ -71,7 +71,7 @@
       muzzle_flash_file=""
       blood_count_multiplier="0"
       shoot_light_flash_radius="0" 
-      damage_game_effect_entities="data/entities/misc/effect_charm.xml,"
+      damage_game_effect_entities=""
       play_damage_sounds="0"
 	    damage_every_x_frames="15"
     >

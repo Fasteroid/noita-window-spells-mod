@@ -10,6 +10,7 @@ function FindCrossingProjectiles(tag)
         local projectile = projectiles[i]
 
         if EntityHasTag(projectile, tag) then goto continue_1 end -- comment(Fasteroid): skip what's already gone through
+        if EntityHasTag(projectile, "window") then goto continue_1 end -- no window self intersection
 
         local velocity = EntityGetFirstComponent(projectile, "VelocityComponent")
         
@@ -63,4 +64,16 @@ function FindCrossingProjectiles(tag)
     end
     
     return entities_through_window
+end
+
+function ComponentObjectEditValue2(component_id, object_name, field_name, modifier)
+    local value = ComponentObjectGetValue2(component_id, object_name, field_name)
+    value = modifier(value)
+    ComponentObjectSetValue2(component_id, object_name, field_name, value)
+end
+
+function ComponentEditValue2(component_id, field_name, modifier)
+    local value = ComponentGetValue2(component_id, field_name)
+    value = modifier(value)
+    ComponentSetValue2(component_id, field_name, value)
 end

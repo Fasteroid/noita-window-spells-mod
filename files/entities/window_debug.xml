@@ -5,20 +5,22 @@
 
 	<Base file="mods/windows/files/entities/window_base.xml">
 		<SpriteComponent 
-			image_file="mods/windows/files/sprites/blast_berserk.xml"
+			image_file="mods/windows/files/sprites/blast_debug.xml"
 			>
 		</SpriteComponent>
 
 
 		<SpriteParticleEmitterComponent
-			sprite_file="data/particles/berserk_0$[1-4].xml"
+			sprite_file=""
+			_enabled="1"
+			lifetime="0"
 			>
 		</SpriteParticleEmitterComponent>
 	</Base>
 	
 	<!-- body -->
 	<ParticleEmitterComponent 
-		emitted_material_name="spark_red"
+		emitted_material_name="spark_blue_dark"
 		gravity.y="0.0"
 		lifetime_min="0.5"
 		lifetime_max="1.5"
@@ -43,7 +45,7 @@
     </ParticleEmitterComponent>	
 
 	<ParticleEmitterComponent 
-		emitted_material_name="spark_red"
+		emitted_material_name="spark_blue_dark"
 		gravity.y="0.0"
 		lifetime_min="0.5"
 		lifetime_max="1.5"
@@ -68,7 +70,7 @@
 	</ParticleEmitterComponent>
 
 	<ParticleEmitterComponent 
-		emitted_material_name="spark_red"
+		emitted_material_name="spark_blue_dark"
 		gravity.y="0.0"
 		lifetime_min="0.5"
 		lifetime_max="1.5"
@@ -93,7 +95,7 @@
 	</ParticleEmitterComponent>
 
 	<LuaComponent
-		script_source_file="mods/windows/files/entities/window_berserk.lua"
+		script_source_file="mods/windows/files/entities/window_debug.lua"
 		execute_every_n_frame="1"
 		>
 	</LuaComponent>

@@ -1,16 +1,7 @@
 dofile_once("mods/windows/files/window_common.lua")
 
-function ComponentObjectEditValue2(component_id, object_name, field_name, modifier)
-    local value = ComponentObjectGetValue2(component_id, object_name, field_name)
-    value = modifier(value)
-    ComponentObjectSetValue2(component_id, object_name, field_name, value)
-end
-
-function ComponentEditValue2(component_id, field_name, modifier)
-    local value = ComponentGetValue2(component_id, field_name)
-    value = modifier(value)
-    ComponentSetValue2(component_id, field_name, value)
-end
+-- I did this one first, so it might be overcomplicated or scuffed
+-- Look at ANY OTHER FILE for examples!
 
 function isBerserked(entity)
     local telltale = EntityGetFirstComponent(entity, "SpriteParticleEmitterComponent")
