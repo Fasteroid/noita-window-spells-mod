@@ -81,25 +81,7 @@ function ComponentEditValue2(component_id, field_name, modifier)
 end
 
 
-function determine_type(value)
-    -- Check for boolean first
-    if type(value) == "boolean" then
-        return "value_bool"
-    end
-    
-    -- Check for number
-    if type(value) == "number" then
-        -- Check if it's an integer (whole number)
-        if value == math.floor(value) then
-            return "value_int"
-        else
-            return "value_float"
-        end
-    end
-    
-    -- Everything else is a string
-    return "value_string"
-end
+
 
 function EntityGetVariable(entity_id, var_name, var_type)
     local storage = EntityGetFirstComponent(entity_id, "VariableStorageComponent", var_name)
@@ -107,8 +89,7 @@ function EntityGetVariable(entity_id, var_name, var_type)
     return ComponentGetValue2(storage, var_type)
 end
 
-function EntitySetVariable(entity_id, var_name, var_value, is_default)
-    local t = determine_type(var_value)
+function EntitySetVariable(entity_id, var_name, var_value, var_type, is_default)
     local storage = EntityGetFirstComponent(entity_id, "VariableStorageComponent", var_name)
     
     if( storage == nil ) then
@@ -118,7 +99,7 @@ function EntitySetVariable(entity_id, var_name, var_value, is_default)
     end
 
     if( not is_default ) then
-        ComponentSetValue2(storage, t, var_value)
+        ComponentSetValue2(storage, var_type, var_value)
     end
 end
 

@@ -16,46 +16,30 @@ local double = function(n) return n*2 end
 
 function applyBerserkToProjectile(entity)
 
-    local count = EntityGetVariable(entity, "berserk_window_count", "value_int") or 0
-    EntitySetVariable(entity, "berserk_window_count", count + 1)
-
     local projectile_component = EntityGetFirstComponent(entity, "ProjectileComponent")
 
-    if( count > 3 ) then
-        if( EntityHasTag(entity,"berserk_window_overcharge") ) then return end
+    if( EntityGetVariable(entity, "bsrk_wnd_basedamage", "value_float") == nil ) then
+        local baseDamage = ComponentGetValue2(projectile_component, "damage")
+        local baseRay    = ComponentObjectGetValue2(projectile_component, "config_explosion", "ray_energy")
+        local baseRadius = ComponentObjectGetValue2(projectile_component, "config_explosion", "explosion_radius")
 
-        ComponentObjectSetValues2(projectile_component,"config_explosion",{
-            never_cache=true ,
-            camera_shake=60,
-            explosion_radius=250,
-            explosion_sprite="data/particles/explosion_032.xml",
-            load_this_entity="data/entities/particles/particle_explosion/main_large.xml,data/entities/misc/loose_chunks.xml,data/entities/misc/explosion_was_here.xml",
-            explosion_sprite_lifetime=0,
-            create_cell_probability=5 ,
-            hole_destroy_liquid=true,
-            hole_enabled=true,
-            ray_energy=6700000,
-            damage=10,
-            particle_effect=true,
-            damage_mortals=true,
-            shake_vegetation=true,
-            sparks_count_max=3000,
-            sparks_count_min=3000,
-            sparks_enabled=true,
-            stains_enabled=true ,
-            stains_radius=35,
-            background_lightning_count=5,
-            max_durability_to_destroy=12,
-            audio_event_name="explosions/nuke"
-        })
-        EntityLoadToEntity("data/entities/misc/crumbling_earth_projectile.xml", entity)
+        if( isBerserked(entity) ) then 
+            baseDamage = baseDamage * 0.5 
+            baseRay    = baseRay * 0.5
+            baseRadius = baseRadius * 0.5
+        end
 
-        EntityKill( GetUpdatedEntityID() )
-
-        ComponentSetValue2(projectile_component, "lifetime", 0)
-        EntityAddTag(entity, "berserk_window_overcharge")
-        return
+        EntitySetVariable(entity, "bsrk_wnd_basedamage", baseDamage, "value_float")
+        EntitySetVariable(entity, "bsrk_wnd_baseray"   , baseRay   , "value_float")
+        EntitySetVariable(entity, "bsrk_wnd_baseradius", baseRadius, "value_float")
     end
+
+    local windowCount = ( EntityGetVariable(entity, "bsrk_wnd_count", "value_int") or 1 ) + 1
+    EntitySetVariable(entity, "bsrk_wnd_count", windowCount, "value_int")
+
+    local baseDamage = EntityGetVariable(entity, "bsrk_wnd_basedamage", "value_float")
+    local baseRay    = EntityGetVariable(entity, "bsrk_wnd_baseray"   , "value_float")
+    local baseRadius = EntityGetVariable(entity, "bsrk_wnd_baseradius", "value_float")
     
     local berserk_trail = EntityAddComponent2(entity, "ParticleEmitterComponent", {
         emitted_material_name         = "spark_red",
@@ -92,17 +76,15 @@ function applyBerserkToProjectile(entity)
 
     ComponentSetValue2(berserk_trail, "gravity", 0, 0, 0, 0)
 
-    if( count < 2 ) then -- don't double explosion more than twice
-        ComponentObjectEditValue2(projectile_component, "config_explosion", "ray_energy", double)
-        ComponentObjectEditValue2(projectile_component, "config_explosion", "explosion_radius", double)
-    end
+    ComponentObjectSetValue2(projectile_component, "config_explosion", "ray_energy", baseRay * windowCount)
+    ComponentObjectSetValue2(projectile_component, "config_explosion", "explosion_radius", baseRadius * windowCount)
 
     ComponentObjectSetValue2(projectile_component,  "config_explosion", "sparks_inner_radius_coeff", 0)
     ComponentObjectSetValue2(projectile_component,  "config_explosion", "sparks_enabled", true) 
 
     ComponentSetValue2(projectile_component,  "mShooterHerdId", -1)
 
-    ComponentEditValue2(projectile_component, "damage", double)
+    ComponentSetValue2(projectile_component, "damage", baseDamage * windowCount)
 end
 
 local crossing_projectiles = FindCrossingProjectiles("crossed_window_berserk")
