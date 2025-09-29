@@ -14,7 +14,10 @@ table.insert( actions,
 	mana               = 30,
 	max_uses           = 15,
 	action = function()
-		add_projectile("mods/windows/files/entities/window_berserk.xml")
+		if not reflecting then
+			add_projectile("mods/windows/files/entities/window_berserk.xml")
+		end
+		c.fire_rate_wait = c.fire_rate_wait + 15
 	end,
 } )
 
@@ -30,31 +33,32 @@ table.insert( actions,
 	price              = 200,
 	mana               = 50,
 	mana               = 15,
-	-- max_uses = 15,
+	max_uses = 15,
 	action = function()
-		add_projectile("mods/windows/files/entities/window_frozen.xml")
+		if not reflecting then
+			add_projectile("mods/windows/files/entities/window_frozen.xml")
+		end
+		c.fire_rate_wait = c.fire_rate_wait + 15
 	end,
 } )
 
-
-
-
-
-
 table.insert( actions,
 {
-    id                 = "WINDOW_DEBUG",
-    name               = "$action_window_debug",
-    description        = "$actiondesc_window_debug",
-    sprite             = "mods/windows/files/gfx/window_debug.png",
+    id                 = "WINDOW_ELECTRIC",
+    name               = "$action_window_electric",
+    description        = "$actiondesc_window_electric",
+    sprite             = "mods/windows/files/gfx/window_electric.png",
 	type 			   = ACTION_TYPE_STATIC_PROJECTILE,
-	spawn_level                       = "10",  -- BERSERK_FIELD
-	spawn_probability                 = "0.1", -- BERSERK_FIELD
-	price = 180,
-	price = 200,
-	mana  = 30,
-	-- max_uses = 15,
+	spawn_level        = "1,3,5,6", -- ELECTROCUTION_FIELD
+	spawn_probability  = "0.3,0.6,0.8,0.3", -- ELECTROCUTION_FIELD
+	price              = 200,
+	mana               = 60,
+	max_uses           = 15,
+	max_uses           = 15,
 	action = function()
-		add_projectile("mods/windows/files/entities/window_debug.xml")
+		if not reflecting then
+			add_projectile("mods/windows/files/entities/window_electric.xml")
+		end
+		c.fire_rate_wait = c.fire_rate_wait + 15
 	end,
 } )

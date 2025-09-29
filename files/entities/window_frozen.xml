@@ -11,7 +11,7 @@
 
 	<Base file="mods/windows/files/entities/window_base.xml">
 		<SpriteComponent 
-			image_file="mods/windows/files/sprites/blast_debug.xml"
+			image_file="mods/windows/files/sprites/blast_frozen.xml"
 			>
 		</SpriteComponent>
 
@@ -41,7 +41,7 @@
 		render_on_grid="1"
 		fade_based_on_lifetime="1"
 		cosmetic_force_create="0"
-		airflow_force="0.5"
+		airflow_force="0.1"
 		airflow_time="0.01"
 		airflow_scale="0.05"
 		emission_interval_min_frames="1"

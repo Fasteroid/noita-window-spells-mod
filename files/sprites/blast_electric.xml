@@ -1,8 +1,8 @@
 <Sprite 
-  color_a="0" 
+  color_a="1" 
   color_b="1" 
-  color_g="0" 
-  color_r="1" 
+  color_g="0.9" 
+  color_r="0.6" 
   default_animation="spawn" 
   filename="mods/windows/files/sprites/blast_linear.png" 
   offset_x="32" 

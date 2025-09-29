@@ -4,5 +4,5 @@ actiondesc_window_berserk,"A window of berserk magic",,,,,,,,,,,,,,,,,,,,,,,
 action_window_frozen,Window of stillness,,,,,,,,,,,,,,,,,,,,,,,
 actiondesc_window_frozen,"A window of freezing magic",,,,,,,,,,,,,,,,,,,,,,,
 
-action_window_debug,Window of Debugging,,,,,,,,,,,,,,,,,,,,,,,
-actiondesc_window_debug,"A window of debugging magic",,,,,,,,,,,,,,,,,,,,,,,
+action_window_electric,Window of thunder,,,,,,,,,,,,,,,,,,,,,,,
+actiondesc_window_electric,"A window of electrifying magic",,,,,,,,,,,,,,,,,,,,,,,
