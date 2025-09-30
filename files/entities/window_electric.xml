@@ -1,5 +1,5 @@
 <Entity 
-   name="$projectile_default" 
+   name="window_electric" 
    tags="projectile_player"
    >
 
@@ -38,6 +38,7 @@
 	</Base>
 	
 	<!-- body -->
+
 	<ParticleEmitterComponent 
 		emitted_material_name="plasma_fading"
 		gravity.y="0.0"
@@ -62,6 +63,8 @@
 		y_pos_offset_max="32"
 		>
     </ParticleEmitterComponent>	
+
+	<!-- edges -->
 
 	<ParticleEmitterComponent 
 		emitted_material_name="plasma_fading"
@@ -113,8 +116,9 @@
 		>
 	</ParticleEmitterComponent>
 
+	<!-- extra particles -->
+
 	<ParticleEmitterComponent 
-		_tags="enabled_in_world,enabled_in_hand"
 		emitted_material_name="spark_blue"
 		offset.x="0"
 		offset.y="0"

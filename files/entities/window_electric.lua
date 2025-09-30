@@ -15,6 +15,6 @@ for i=1, #crossing_projectiles do
     local electricImpact = EntityAddComponent2(proj, "LuaComponent", {
         execute_on_removed = true,
         execute_every_n_frame = -1,
-        script_source_file = "mods/windows/files/entities/spawn_electricity.lua"
+        script_source_file = "mods/windows/files/entities/window_electric_modifier.lua"
     })
 end

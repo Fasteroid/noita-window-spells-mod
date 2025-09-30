@@ -1,4 +1,4 @@
-
+dofile_once("mods/windows/files/constants.lua")
 
 table.insert( actions,
 {
@@ -10,14 +10,14 @@ table.insert( actions,
 	spawn_level        = "2,3,4", -- BERSERK_FIELD
 	spawn_probability  = "0.3,0.6,0.3", -- BERSERK_FIELD
 	price              = 180,
-	price              = 200,
-	mana               = 30,
-	max_uses           = 15,
+	price              = 300,
+	mana               = 90,
+	max_uses           = 10,
 	action = function()
 		if not reflecting then
 			add_projectile("mods/windows/files/entities/window_berserk.xml")
 		end
-		c.fire_rate_wait = c.fire_rate_wait + 15
+		c.fire_rate_wait = c.fire_rate_wait + 30
 	end,
 } )
 
@@ -32,11 +32,12 @@ table.insert( actions,
 	spawn_probability  = "0.3,0.6,0.7,0.3", -- FREEZE_FIELD
 	price              = 200,
 	mana               = 50,
-	mana               = 15,
-	max_uses = 15,
+	max_uses           = 15,
 	action = function()
 		if not reflecting then
 			add_projectile("mods/windows/files/entities/window_frozen.xml")
+		else
+			c.damage_ice_add = c.damage_ice_add + FREEZE_CHARGE_DAMAGE
 		end
 		c.fire_rate_wait = c.fire_rate_wait + 15
 	end,
@@ -52,12 +53,35 @@ table.insert( actions,
 	spawn_level        = "1,3,5,6", -- ELECTROCUTION_FIELD
 	spawn_probability  = "0.3,0.6,0.8,0.3", -- ELECTROCUTION_FIELD
 	price              = 200,
-	mana               = 60,
-	max_uses           = 15,
+	mana               = 50,
 	max_uses           = 15,
 	action = function()
 		if not reflecting then
 			add_projectile("mods/windows/files/entities/window_electric.xml")
+		else 
+			c.damage_electricity_add = c.damage_electricity_add + ELECTRIC_CHARGE_DAMAGE
+		end
+		c.fire_rate_wait = c.fire_rate_wait + 15
+	end,
+} )
+
+table.insert( actions,
+{
+    id                 = "WINDOW_FIRE",
+    name               = "$action_window_fire",
+    description        = "$actiondesc_window_fire",
+    sprite             = "mods/windows/files/gfx/window_fire.png",
+	type 			   = ACTION_TYPE_STATIC_PROJECTILE,
+	spawn_level        = "0,1,4,5,6",
+	spawn_probability  = "0.6,0.8,0.5,0.6,0.7", -- biome temperature sorta
+	price              = 220,
+	mana               = 60,
+	max_uses           = 15,
+	action = function()
+		if not reflecting then
+			add_projectile("mods/windows/files/entities/window_fire.xml")
+		else
+			c.damage_fire_add = c.damage_fire_add + FIRE_CHARGE_DAMAGE
 		end
 		c.fire_rate_wait = c.fire_rate_wait + 15
 	end,

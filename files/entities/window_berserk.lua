@@ -87,7 +87,7 @@ function applyBerserkToProjectile(entity)
     ComponentSetValue2(projectile_component, "damage", baseDamage * windowCount)
 end
 
-local crossing_projectiles = FindCrossingProjectiles("crossed_window_berserk")
+local crossing_projectiles = FindCrossingProjectiles()
 
 for i=1, #crossing_projectiles do
 

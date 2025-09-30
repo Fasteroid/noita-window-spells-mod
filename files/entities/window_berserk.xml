@@ -1,5 +1,5 @@
 <Entity 
-   name="$projectile_default" 
+   name="window_berserk" 
    tags="projectile_player"
    >
 
@@ -17,6 +17,7 @@
 	</Base>
 	
 	<!-- body -->
+
 	<ParticleEmitterComponent 
 		emitted_material_name="spark_red"
 		gravity.y="0.0"
@@ -41,6 +42,8 @@
 		y_pos_offset_max="32"
 		>
     </ParticleEmitterComponent>	
+
+	<!-- edges -->
 
 	<ParticleEmitterComponent 
 		emitted_material_name="spark_red"

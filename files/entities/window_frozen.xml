@@ -1,5 +1,5 @@
 <Entity 
-   name="$projectile_default" 
+   name="window_frozen" 
    tags="projectile_player"
    >
 
@@ -31,6 +31,7 @@
 	</Base>
 	
 	<!-- body -->
+
 	<ParticleEmitterComponent 
 		emitted_material_name="spark_white"
 		gravity.y="0.0"
@@ -55,6 +56,8 @@
 		y_pos_offset_max="32"
 		>
     </ParticleEmitterComponent>	
+
+	<!-- edges -->
 
 	<ParticleEmitterComponent 
 		emitted_material_name="spark_white"
@@ -105,6 +108,8 @@
 		y_pos_offset_max="31"
 		>
 	</ParticleEmitterComponent>
+
+	<!-- freeze-specific stuff -->
 
 	<MagicConvertMaterialComponent
       from_material_array="water,water_ice,water_salt,water_fading,water_static,fire,lava,water_swamp,radioactive_liquid,acid,blood_cold,blood,poison,slime"

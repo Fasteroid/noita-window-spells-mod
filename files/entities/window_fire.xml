@@ -1,0 +1,251 @@
+<Entity 
+   tags="projectile_player"
+   name="window_fire"
+   >
+
+	<GameAreaEffectComponent
+		radius="28"
+		frame_length="70"
+		>
+	</GameAreaEffectComponent>
+
+	<Base file="mods/windows/files/entities/window_base.xml">
+		<SpriteComponent 
+			image_file="mods/windows/files/sprites/blast_fire.xml"
+		    smooth_filtering="1"
+        	fog_of_war_hole="1"
+			>
+		</SpriteComponent>
+
+		<SpriteParticleEmitterComponent
+			_enabled="0"
+			sprite_file=""
+			>
+		</SpriteParticleEmitterComponent>
+	</Base>
+
+	<!-- body -->
+
+	<ParticleEmitterComponent 
+		emitted_material_name="spark"
+		gravity.y="0.0"
+		lifetime_min="0.5"
+		lifetime_max="1.5"
+		count_min="1"
+		count_max="1"
+		render_on_grid="1"
+		fade_based_on_lifetime="1"
+		cosmetic_force_create="0"
+		airflow_force="0.3"
+		airflow_time="0.01"
+		airflow_scale="0.05"
+		emission_interval_min_frames="1"
+		emission_interval_max_frames="1"
+		emit_cosmetic_particles="1"
+		is_emitting="1" 
+		
+		x_pos_offset_min="-2"
+		y_pos_offset_min="-33"
+		x_pos_offset_max="2"
+		y_pos_offset_max="33"
+		>
+    </ParticleEmitterComponent>	
+
+	<ParticleEmitterComponent 
+		emitted_material_name="spark"
+		custom_style="FIRE"
+		gravity.y="0.0"
+		lifetime_min="0.5"
+		lifetime_max="1.5"
+		count_min="1"
+		count_max="1"
+		render_on_grid="1"
+		fade_based_on_lifetime="1"
+		cosmetic_force_create="0"
+		airflow_force="0.3"
+		airflow_time="0.01"
+		airflow_scale="0.05"
+		emission_interval_min_frames="1"
+		emission_interval_max_frames="1"
+		emit_cosmetic_particles="1"
+		is_emitting="1" 
+		
+		x_pos_offset_min="-1"
+		y_pos_offset_min="-32"
+		x_pos_offset_max="1"
+		y_pos_offset_max="32"
+		>
+    </ParticleEmitterComponent>	
+
+	<ParticleEmitterComponent 
+		emitted_material_name="fire"
+	    lifetime_min="0.4"
+	    lifetime_max="0.6"
+		count_min="8"
+		count_max="8"
+		fade_based_on_lifetime="1"
+		emission_interval_min_frames="2"
+		emission_interval_max_frames="2"
+	    create_real_particles="1"
+	    emit_cosmetic_particles="0"
+		is_emitting="1" 
+		fire_cells_dont_ignite_damagemodel="1" 
+
+		x_vel_min="-2"
+	    x_vel_max="2"
+	    y_vel_min="-20"
+	    y_vel_max="-10"
+		
+		x_pos_offset_min="-1"
+		y_pos_offset_min="-32"
+		x_pos_offset_max="1"
+		y_pos_offset_max="32"
+		>
+    </ParticleEmitterComponent>	
+
+	<!-- edges -->
+
+	<ParticleEmitterComponent 
+		emitted_material_name="spark"
+		custom_style="FIRE"
+		lifetime_min="0.3"
+		lifetime_max="0.4"
+		count_min="1"
+		count_max="1"
+		fade_based_on_lifetime="1"
+		emission_interval_min_frames="2"
+		emission_interval_max_frames="4"
+		emit_cosmetic_particles="0"
+		create_real_particles="1"
+		is_emitting="1" 
+
+		x_vel_min="-2"
+	    x_vel_max="2"
+	    y_vel_min="-20"
+	    y_vel_max="-10"
+		
+		x_pos_offset_min="-2"
+		y_pos_offset_min="-33"
+		x_pos_offset_max="2"
+		y_pos_offset_max="-30"
+		>
+	</ParticleEmitterComponent>
+
+	<ParticleEmitterComponent 
+		emitted_material_name="spark"
+		custom_style="FIRE"
+		lifetime_min="0.3"
+		lifetime_max="0.4"
+		count_min="3"
+		count_max="3"
+		fade_based_on_lifetime="1"
+		emission_interval_min_frames="2"
+		emission_interval_max_frames="4"
+		emit_cosmetic_particles="0"
+		create_real_particles="1"
+		is_emitting="1" 
+
+		x_vel_min="-2"
+	    x_vel_max="2"
+	    y_vel_min="-20"
+	    y_vel_max="-10"
+		
+		x_pos_offset_min="-2"
+		y_pos_offset_min="30"
+		x_pos_offset_max="2"
+		y_pos_offset_max="33"
+		>
+	</ParticleEmitterComponent>
+
+	<ParticleEmitterComponent 
+		emitted_material_name="smoke"
+		lifetime_min="0.4"
+		lifetime_max="0.6"
+		count_min="1"
+		count_max="1"
+		fade_based_on_lifetime="1"
+		emission_interval_min_frames="16"
+		emission_interval_max_frames="32"
+		emit_cosmetic_particles="0"
+		create_real_particles="1"
+		is_emitting="1" 
+
+		x_vel_min="-2"
+	    x_vel_max="2"
+	    y_vel_min="-20"
+	    y_vel_max="-10"
+		
+		x_pos_offset_min="-1"
+		y_pos_offset_min="-32"
+		x_pos_offset_max="1"
+		y_pos_offset_max="-31"
+		>
+	</ParticleEmitterComponent>
+
+	<ParticleEmitterComponent 
+		emitted_material_name="smoke"
+		lifetime_min="0.4"
+		lifetime_max="0.6"
+		count_min="3"
+		count_max="3"
+		fade_based_on_lifetime="1"
+		emission_interval_min_frames="16"
+		emission_interval_max_frames="32"
+		emit_cosmetic_particles="0"
+		create_real_particles="1"
+		is_emitting="1" 
+
+		x_vel_min="-2"
+	    x_vel_max="2"
+	    y_vel_min="-20"
+	    y_vel_max="-10"
+		
+		x_pos_offset_min="-1"
+		y_pos_offset_min="31"
+		x_pos_offset_max="1"
+		y_pos_offset_max="32"
+		>
+	</ParticleEmitterComponent>
+
+	<!-- specific fire things -->
+
+	<LightComponent 
+		_enabled="1" 
+		radius="130"
+		fade_out_time="1.5" 
+		r="240"
+		g="180"
+		b="120" >
+	</LightComponent>
+
+	<LightComponent 
+		_enabled="1" 
+		radius="16"
+		fade_out_time="1.5" 
+		r="255"
+		g="255"
+		b="255" >
+	</LightComponent>
+
+	<LuaComponent
+		script_source_file="mods/windows/files/entities/window_fire.lua"
+		execute_every_n_frame="1"
+		>
+	</LuaComponent>
+
+	<LuaComponent
+		script_source_file="mods/windows/files/entities/window_fire_init.lua"
+		execute_on_added="1"
+		remove_after_executed="1"
+	>
+	</LuaComponent>
+
+	<AudioLoopComponent
+		file="data/audio/Desktop/projectiles.bank"
+		event_name="player_projectiles/torch/loop"
+		auto_play="1"
+		set_speed_parameter="1"
+		>
+	</AudioLoopComponent>
+
+</Entity>

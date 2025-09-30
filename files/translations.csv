@@ -6,3 +6,6 @@ actiondesc_window_frozen,"A window of freezing magic",,,,,,,,,,,,,,,,,,,,,,,
 
 action_window_electric,Window of thunder,,,,,,,,,,,,,,,,,,,,,,,
 actiondesc_window_electric,"A window of electrifying magic",,,,,,,,,,,,,,,,,,,,,,,
+
+action_window_fire,Window of ignition,,,,,,,,,,,,,,,,,,,,,,,
+actiondesc_window_fire,"A window of fire magic",,,,,,,,,,,,,,,,,,,,,,,
