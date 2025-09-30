@@ -1,6 +1,7 @@
 dofile_once("mods/windows/files/window_common.lua")
+dofile_once("mods/windows/files/constants.lua")
 
-local crossing_projectiles = FindCrossingProjectiles()
+local crossing_projectiles = FindCrossing()
 
 for i=1, #crossing_projectiles do
     local proj = crossing_projectiles[i]
@@ -10,5 +11,5 @@ for i=1, #crossing_projectiles do
     
     local proj_comp = EntityGetFirstComponent(proj, "ProjectileComponent")
     ComponentEditValue2(proj_comp, "damage_game_effect_entities", function(fx) return fx .. "data/entities/misc/effect_frozen.xml," end)
-    ComponentObjectEditValue2(proj_comp, "damage_by_type", "ice", function(dmg) return (dmg or 0) + 0.2 end)
+    ComponentObjectEditValue2(proj_comp, "damage_by_type", "ice", function(dmg) return (dmg or 0) + FREEZE_CHARGE_DAMAGE end)
 end

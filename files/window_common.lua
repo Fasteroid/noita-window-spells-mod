@@ -1,4 +1,6 @@
-function FindCrossingProjectiles() 
+function FindCrossing(tags, allow_repeat) 
+
+    if( not tags ) then tags = {"projectile"} end
 
     local window = GetUpdatedEntityID()
     local window_radius = 32
@@ -6,12 +8,19 @@ function FindCrossingProjectiles()
     
     local entities_through_window = {}
 
-    local projectiles = EntityGetWithTag("projectile")
+    local projectiles = {}
 
-    for i=1, #projectiles do
-        local projectile = projectiles[i]
+    for n, tag in ipairs(tags) do
+        local victims = EntityGetWithTag(tag)
 
-        if EntityHasTag(projectile, "window_subject_" .. tostring(window)) then goto continue_1 end -- comment(Fasteroid): skip what's already gone through
+        for e, ent in ipairs(victims) do
+            projectiles[ent] = true
+        end
+    end
+
+    for projectile, _ in pairs(projectiles) do
+
+        if not allow_repeat and EntityHasTag(projectile, "window_subject_" .. tostring(window)) then goto continue_1 end -- comment(Fasteroid): skip what's already gone through
         if EntityHasTag(projectile, "window") then goto continue_1 end -- no window self intersection
 
         local velocity = EntityGetFirstComponent(projectile, "VelocityComponent")

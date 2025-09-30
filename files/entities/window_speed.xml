@@ -1,0 +1,112 @@
+<Entity 
+   name="window_speed" 
+   tags="projectile_player"
+   >
+
+	<Base file="mods/windows/files/entities/window_base.xml">
+		<SpriteComponent 
+			image_file="mods/windows/files/sprites/blast_frozen.xml"
+			>
+		</SpriteComponent>
+
+
+		<SpriteParticleEmitterComponent
+			_enabled="0"
+			sprite_file=""
+			lifetime="0"
+			>
+		</SpriteParticleEmitterComponent>
+	</Base>
+	
+	<!-- body -->
+
+	<ParticleEmitterComponent 
+		emitted_material_name="spark_teal"
+		gravity.y="0.0"
+		lifetime_min="0.5"
+		lifetime_max="1.5"
+		count_min="2"
+		count_max="2"
+		render_on_grid="1"
+		fade_based_on_lifetime="1"
+		cosmetic_force_create="0"
+		airflow_force="0.1"
+		airflow_time="0.01"
+		airflow_scale="0.05"
+		emission_interval_min_frames="1"
+		emission_interval_max_frames="1"
+		emit_cosmetic_particles="1"
+		is_emitting="1" 
+
+	    x_vel_max="40"
+		x_vel_min="-40"
+		y_vel_min="-1"
+	    y_vel_max="1"
+		
+		x_pos_offset_min="-1"
+		y_pos_offset_min="-32"
+		x_pos_offset_max="1"
+		y_pos_offset_max="32"
+		>
+    </ParticleEmitterComponent>	
+
+	<!-- edges -->
+
+	<ParticleEmitterComponent 
+		emitted_material_name="spark_teal"
+		gravity.y="0.0"
+		lifetime_min="0.5"
+		lifetime_max="1.5"
+		count_min="1"
+		count_max="1"
+		render_on_grid="1"
+		fade_based_on_lifetime="1"
+		cosmetic_force_create="0"
+		airflow_force="0.3"
+		airflow_time="0.01"
+		airflow_scale="0.05"
+		emission_interval_min_frames="2"
+		emission_interval_max_frames="2"
+		emit_cosmetic_particles="1"
+		is_emitting="1" 
+		
+		x_pos_offset_min="-1"
+		y_pos_offset_min="-32"
+		x_pos_offset_max="1"
+		y_pos_offset_max="-31"
+		>
+	</ParticleEmitterComponent>
+
+	<ParticleEmitterComponent 
+		emitted_material_name="spark_teal"
+		gravity.y="0.0"
+		lifetime_min="0.5"
+		lifetime_max="1.5"
+		count_min="1"
+		count_max="1"
+		render_on_grid="1"
+		fade_based_on_lifetime="1"
+		cosmetic_force_create="0"
+		airflow_force="0.3"
+		airflow_time="0.01"
+		airflow_scale="0.05"
+		emission_interval_min_frames="2"
+		emission_interval_max_frames="2"
+		emit_cosmetic_particles="1"
+		is_emitting="1" 
+		
+		x_pos_offset_min="-1"
+		y_pos_offset_min="32"
+		x_pos_offset_max="1"
+		y_pos_offset_max="31"
+		>
+	</ParticleEmitterComponent>
+
+
+	<LuaComponent
+		script_source_file="mods/windows/files/entities/window_speed.lua"
+		execute_every_n_frame="1"
+		>
+	</LuaComponent>
+
+</Entity>

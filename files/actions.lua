@@ -9,7 +9,6 @@ table.insert( actions,
 	type 			   = ACTION_TYPE_STATIC_PROJECTILE,
 	spawn_level        = "2,3,4", -- BERSERK_FIELD
 	spawn_probability  = "0.3,0.6,0.3", -- BERSERK_FIELD
-	price              = 180,
 	price              = 300,
 	mana               = 90,
 	max_uses           = 10,
@@ -18,6 +17,28 @@ table.insert( actions,
 			add_projectile("mods/windows/files/entities/window_berserk.xml")
 		end
 		c.fire_rate_wait = c.fire_rate_wait + 30
+	end,
+} )
+
+table.insert( actions,
+{
+    id                 = "WINDOW_SPEED",
+    name               = "$action_window_speed",
+    description        = "$actiondesc_window_speed",
+    sprite             = "mods/windows/files/gfx/window_speed.png",
+	type 			   = ACTION_TYPE_STATIC_PROJECTILE,
+	spawn_level        = "2,3,4",
+	spawn_probability  = "0.4,0.7,0.4",
+	price              = 250,
+	mana               = 75,
+	max_uses           = 12,
+	action = function()
+		if not reflecting then
+			add_projectile("mods/windows/files/entities/window_speed.xml")
+		else
+			c.speed_multiplier = c.speed_multiplier * SPEED_WINDOW_MUL
+		end
+		c.fire_rate_wait = c.fire_rate_wait + 25
 	end,
 } )
 

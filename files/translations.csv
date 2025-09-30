@@ -9,3 +9,6 @@ actiondesc_window_electric,"A window of electrifying magic",,,,,,,,,,,,,,,,,,,,,
 
 action_window_fire,Window of ignition,,,,,,,,,,,,,,,,,,,,,,,
 actiondesc_window_fire,"A window of fire magic",,,,,,,,,,,,,,,,,,,,,,,
+
+action_window_speed,Window of acceleration,,,,,,,,,,,,,,,,,,,,,,,
+actiondesc_window_speed,"A window spacetime-bending magic",,,,,,,,,,,,,,,,,,,,,,,
