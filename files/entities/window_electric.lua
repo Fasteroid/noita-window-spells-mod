@@ -4,9 +4,9 @@ local crossing_projectiles = FindCrossingProjectiles()
 
 for i=1, #crossing_projectiles do
     local proj = crossing_projectiles[i]
-    print( tostring(proj) )
 
     EntityLoadToEntity( "data/entities/particles/electricity.xml", proj )
+    GamePlaySoundFromEntity(proj, "data/audio/Desktop/materials.bank", "materials/electric_spark")
     
     local proj_comp = EntityGetFirstComponent(proj, "ProjectileComponent")
     ComponentEditValue2(proj_comp, "damage_game_effect_entities", function(fx) return fx .. "data/entities/misc/effect_electrified.xml," end)

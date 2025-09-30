@@ -109,3 +109,8 @@ function ComponentObjectSetValues2(component_id, object_name, fields_table)
         ComponentObjectSetValue2(component_id, object_name, field_name, value)
     end
 end
+
+function GamePlaySoundFromEntity(ent_id, bank, event)
+    local x, y = EntityGetTransform(ent_id)
+    GamePlaySound(bank, event, x, y)
+end

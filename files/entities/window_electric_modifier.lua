@@ -11,6 +11,4 @@ local length = 5000
 local vel_x = math.cos( theta ) * length
 local vel_y = 0 - math.sin( theta ) * length
 
-print("spawn some electricity")
-
 shoot_projectile( entity_id, "data/entities/misc/electricity.xml", pos_x, pos_y, vel_x, vel_y )
